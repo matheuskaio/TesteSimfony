@@ -1,0 +1,62 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+cookers:
+    path: /cookers
+    controller: App\Controller\CookerController::search
+    methods:
+      - GET
+cooker:
+    path: /cookers/{id}
+    controller: App\Controller\CookerController::searchByOne
+    methods:
+      - GET
+
+remove_cooker:
+  path: /cookers/{id}
+  controller: App\Controller\CookerController::remove
+  methods:
+    - DELETE
+create_cooker:
+  path: /cookers
+  controller: App\Controller\CookerController::create
+  methods:
+    - POST
+update_cooker:
+  path: /cookers/{id}
+  controller: App\Controller\CookerController::update
+  methods:
+    - POST
+ingredients:
+  path: /ingredients
+  controller: App\Controller\IngredientController::search
+  methods:
+    - GET
+ingredient:
+  path: /ingredients/{id}
+  controller: App\Controller\IngredientController::searchByOne
+  methods:
+    - GET
+
+remove_ingredient:
+  path: /ingredients/{id}
+  controller: App\Controller\IngredientController::remove
+  methods:
+    - DELETE
+create_ingredient:
+  path: /ingredients
+  controller: App\Controller\IngredientController::create
+  methods:
+    - POST
+update_ingredient:
+  path: /ingredients/{id}
+  controller: App\Controller\IngredientController::update
+  methods:
+    - POST
+ingredients_by_cooker:
+  path: /ingredients/{id}/cooker
+  controller: App\Controller\IngredientController::searchByCooker
+  methods:
+    - GET
+
+
